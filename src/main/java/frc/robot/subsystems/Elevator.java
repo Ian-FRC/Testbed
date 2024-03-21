@@ -20,7 +20,7 @@ public class Elevator extends SubsystemBase {
 
   /** Creates a new Elevator. */
   public Elevator() {
-    elevatorMotor = new CANSparkMax(Constants.ClimbConstants.elevatorMotorID, CANSparkLowLevel.MotorType.kBrushed);
+    elevatorMotor = new CANSparkMax(Constants.ClimbConstants.ELEVATOR_MOTOR_ID, CANSparkLowLevel.MotorType.kBrushed);
     elevatorMotor.setIdleMode(IdleMode.kBrake);
 
     climbLimitSwitch = new DigitalInput(1);
@@ -32,12 +32,12 @@ public class Elevator extends SubsystemBase {
   }
 
   public void elevatorMotorForward() {
-    elevatorMotor.set(-Constants.ClimbConstants.elevatorSpeed);
+    elevatorMotor.set(-Constants.ClimbConstants.ELEVATOR_SPEED);
   }
     
   public void elevatorMotorReverse() {
     // if (!climbLimitSwitch.get()) {
-      elevatorMotor.set(Constants.ClimbConstants.elevatorSpeed);
+      elevatorMotor.set(Constants.ClimbConstants.ELEVATOR_SPEED);
     // }
   }  
 

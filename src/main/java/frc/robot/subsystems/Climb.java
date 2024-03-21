@@ -31,8 +31,8 @@ public class Climb extends SubsystemBase {
   /** Creates a new Climb. */
   public Climb() {
 
-    leftClimb = new CANSparkMax(ClimbConstants.leftClimbMotorID, CANSparkLowLevel.MotorType.kBrushless);
-    rightClimb = new CANSparkMax(ClimbConstants.rightClimbMotorID, CANSparkLowLevel.MotorType.kBrushless);
+    leftClimb = new CANSparkMax(ClimbConstants.LEFT_CLIMB_MOTOR_ID, CANSparkLowLevel.MotorType.kBrushless);
+    rightClimb = new CANSparkMax(ClimbConstants.LEFT_CLIMB_MOTOR_ID, CANSparkLowLevel.MotorType.kBrushless);
 
     pidController = leftClimb.getPIDController();
 
@@ -61,7 +61,7 @@ public class Climb extends SubsystemBase {
       //   ClimbConstants.rotations, 
       //   CANSparkBase.ControlType.kPosition);
     
-    leftClimb.set(Constants.ClimbConstants.climbSpeed);
+    leftClimb.set(Constants.ClimbConstants.CLIMB_SPEED);
   }
     
   public void climbMotorReverse() {
@@ -69,7 +69,7 @@ public class Climb extends SubsystemBase {
       //   -ClimbConstants.rotations, 
       //   CANSparkBase.ControlType.kPosition);
 
-    leftClimb.set(-Constants.ClimbConstants.climbSpeed);
+    leftClimb.set(-Constants.ClimbConstants.CLIMB_SPEED);
   }
 
   public void climbMotorStop() {

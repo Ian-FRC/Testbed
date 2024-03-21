@@ -18,15 +18,25 @@ package frc.robot;
  */
 public final class Constants {
   public static class OperatorConstants {
-    public static final int kDriverControllerPort = 0;
+    public static final int K_DRIVER_CONTROLLER_PORT = 0;
   }
 
   public static final class ClimbConstants {
-    public static final int elevatorMotorID = 1;
-    public static final int leftClimbMotorID = 2;
-    public static final int rightClimbMotorID = 3;
-    public static final double elevatorSpeed = 0.5;
-    public static final double climbSpeed = 0.5;
-    public static double rotations = 40;
+    public static final int ELEVATOR_MOTOR_ID = 1;
+    public static final int LEFT_CLIMB_MOTOR_ID = 2;
+    public static final int RIGHT_CLIMB_MOTOR_UD = 3;
+    public static final double ELEVATOR_SPEED = 0.5;
+    public static final double CLIMB_SPEED = 0.5;
+    public static double ROTATIONS = 40;
+
   }
+  public static final class ShooterConstants {
+    public static final double ANGLE_SPEED = 0.5;
+
+    public static final int LINEAR_ACTUATOR_ID = 17;
+
+  }
+  
+
+
 }
